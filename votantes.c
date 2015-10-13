@@ -25,8 +25,7 @@ bool persona_valida_a_votar( char *dni, char *tipoDNI, mesa_t* mesa_escrutinio )
 		
 		lista_iter_avanzar(iterador);
 	}
-	if( !pertenece )
-		lista_iter_destruir(iterador);
+	lista_iter_destruir(iterador);
 	
 	return false;
 }
