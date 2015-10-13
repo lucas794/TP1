@@ -18,7 +18,10 @@ bool persona_valida_a_votar( char *dni, char *tipoDNI, mesa_t* mesa_escrutinio )
 			pertenece = true;
 			
 		if( pertenece )
+		{
+			lista_iter_destruir(iterador);
 			return true;
+		}
 		
 		lista_iter_avanzar(iterador);
 	}
